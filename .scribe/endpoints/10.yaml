@@ -1,0 +1,391 @@
+name: Pictures
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: 'api/pictures/{id}'
+    metadata:
+      groupName: Pictures
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get picture'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: "The picture's ID."
+        required: true
+        example: 298
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 298
+    queryParameters:
+      embed:
+        name: embed
+        description: 'The list of the picture relationships separated by comma for Eager Loading.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      embed: null
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"id":298,"post_id":101,"file_path":"files\/us\/101\/b60c0e173fd201712f1928b15cbee613.jpg","mime_type":"image\/jpeg","position":3,"active":1,"url":{"full":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg","small":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg","medium":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg","large":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg"}}}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/pictures
+    metadata:
+      groupName: Pictures
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store picture'
+      description: 'Note: This endpoint is only available for the multi steps post edition.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      country_code:
+        name: country_code
+        description: "The code of the user's country."
+        required: true
+        example: US
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      count_packages:
+        name: count_packages
+        description: 'The number of available packages.'
+        required: true
+        example: 3
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      count_payment_methods:
+        name: count_payment_methods
+        description: 'The number of available payment methods.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      post_id:
+        name: post_id
+        description: "The post's ID."
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      pictures:
+        name: pictures
+        description: 'The files to upload.'
+        required: false
+        example:
+          - null
+        type: 'file[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      country_code: US
+      count_packages: 3
+      count_payment_methods: 1
+      post_id: 2
+    fileParameters:
+      pictures:
+        - null
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer D8fgde6v3E1kaZPbVch5a64'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/pictures/{id}'
+    metadata:
+      groupName: Pictures
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete picture'
+      description: |-
+        Note: This endpoint is only available for the multi steps form edition.
+        For newly created listings, the post's ID needs to be added in the request input with the key 'new_post_id'.
+        The 'new_post_id' and 'new_post_tmp_token' fields need to be removed or unset during the listing edition steps.
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: "The picture's ID."
+        required: true
+        example: 999999999
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 999999999
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      post_id:
+        name: post_id
+        description: "The post's ID."
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      post_id: 2
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1kPeaE5fvc8hZbdg4V36D6a'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/pictures/reorder
+    metadata:
+      groupName: Pictures
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reorder pictures'
+      description: 'Note: This endpoint is only available for the multi steps form edition.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      X-Action: bulk
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      post_id:
+        name: post_id
+        description: "The post's ID."
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      body:
+        name: body
+        description: "Encoded json of the new pictures' positions array [['id' => 2, 'position' => 1], ['id' => 1, 'position' => 2], ...]"
+        required: true
+        example: corrupti
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      post_id: 2
+      body: corrupti
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer d6eb3akhaZE16fDcPV8vg54'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/posts/{postId}/pictures'
+    metadata:
+      groupName: Pictures
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List pictures'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters:
+      postId:
+        name: postId
+        description: ''
+        required: true
+        example: 3291
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      postId: 3291
+    queryParameters:
+      embed:
+        name: embed
+        description: 'The list of the picture relationships separated by comma for Eager Loading. Possible values: post.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      postId:
+        name: postId
+        description: 'List of pictures related to a listing (using the listing ID).'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      latest:
+        name: latest
+        description: 'Get only the first picture after ordering (as object instead of collection). Possible value: 0 or 1.'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      sort:
+        name: sort
+        description: 'The sorting parameter (Order by DESC with the given column. Use "-" as prefix to order by ASC). Possible values: position, created_at.'
+        required: false
+        example: '-position'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      perPage:
+        name: perPage
+        description: 'Items per page. Can be defined globally from the admin settings. Cannot be exceeded 100.'
+        required: false
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      embed: null
+      postId: 1
+      latest: false
+      sort: '-position'
+      perPage: 2
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"data":[{"id":2,"post_id":1,"file_path":"files\/us\/1\/43c672c189a374b3af8d87b4e87ec31e.jpg","mime_type":"image\/jpeg","position":2,"active":1,"url":{"full":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg","small":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg","medium":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg","large":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg"}},{"id":1,"post_id":1,"file_path":"files\/us\/1\/8536bdbd55f5f7d3f76311ffc9b72656.jpg","mime_type":"image\/jpeg","position":2,"active":1,"url":{"full":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg","small":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg","medium":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg","large":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/picture.jpg"}}],"links":{"first":"https:\/\/demo.laraclassifier.local\/api\/posts\/3291\/pictures?page=1","last":"https:\/\/demo.laraclassifier.local\/api\/posts\/3291\/pictures?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"https:\/\/demo.laraclassifier.local\/api\/posts\/3291\/pictures?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"https:\/\/demo.laraclassifier.local\/api\/posts\/3291\/pictures","per_page":10,"to":2,"total":2}}}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

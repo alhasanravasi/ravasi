@@ -1,0 +1,141 @@
+/*
+=================================================
+  Table of Contents
+=================================================
+
+	1. Basic
+	2. Helpers Classes
+	3. Layouts
+	4  Elements
+		4.1 Hero Background
+		4.2 Nav
+		4.3 Tabs
+		4.4 Video Play button
+	5 Social Icons
+	6 Extra
+		6.1 Form
+		6.2 Form Dark
+		6.3 Form Border
+		6.4 Form Border Light
+		6.5 Vertical Multiple input group
+		6.6 Other Bootstrap Specific
+
+=================================================
+*/
+
+/* =================================== */
+/*  1. Basic Style
+/* =================================== */
+html[dir="rtl"] body,
+html[dir="rtl"] html {
+	direction: rtl;
+}
+
+/*-------- Preloader --------*/
+html[dir="rtl"] .preloader .lds-ellipsis {
+	left: auto;
+	right: 50%;
+	margin-left: auto;
+	margin-right: -40px;
+}
+
+/* =================================== */
+/*  2. Helpers Classes
+/* =================================== */
+/* Box Shadow */
+html[dir="rtl"] .auth-login-register .shadow-md {
+	box-shadow: 0 0 50px -35px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* =================================== */
+/*  4. Elements
+/* =================================== */
+/*=== 4.2 Nav ===*/
+html[dir="rtl"] .auth-login-register .nav.nav-separator .nav-item + .nav-item .nav-link:after {
+	right: 0;
+	left: auto;
+}
+
+/*=== 4.3 Tabs ===*/
+html[dir="rtl"] .auth-login-register .nav-underline .nav-link {
+	padding-left: var(--bs-nav-link-padding-x);
+	padding-right: var(--bs-nav-link-padding-x);
+}
+
+/* =================================== */
+/*  6. Extras
+/* =================================== */
+/* 6.1 Form */
+html[dir="rtl"] .auth-login-register .icon-group .form-control {
+	padding-left: 0.96rem;
+	padding-right: 44px;
+}
+
+html[dir="rtl"] .auth-login-register .icon-group.icon-group-end .form-control {
+	padding-right: 0.96rem;
+	padding-left: 44px;
+}
+
+html[dir="rtl"] .auth-login-register .icon-group.icon-group-end .icon-inside {
+	left: 0;
+	right: auto;
+}
+
+/* 6.3 Form Border (Input with only bottom border)  */
+html[dir="rtl"] .auth-login-register .form-border .icon-group .form-control {
+	padding-left: 0 !important;
+	padding-right: 30px !important;
+}
+
+html[dir="rtl"] .auth-login-register .form-border .icon-group.icon-group-end .form-control {
+	padding-right: 0 !important;
+	padding-left: 30px !important;
+}
+
+html[dir="rtl"] .auth-login-register .form-border .icon-group.icon-group-end .icon-inside {
+	left: 0;
+	right: auto;
+}
+
+/* 6.5 Vertical Multilple input group */
+html[dir="rtl"] .auth-login-register .vertical-input-group .input-group:first-child * {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+html[dir="rtl"] .auth-login-register .vertical-input-group .input-group:last-child * {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+html[dir="rtl"] .auth-login-register .vertical-input-group .input-group:not(:last-child):not(:first-child) * {
+	border-radius: 0;
+}
+
+/* 6.6 Other Bootstrap Specific */
+html[dir="rtl"] .auth-login-register .btn {
+	direction: rtl;
+}
+
+/* styles-switcher */
+html[dir="rtl"] #styles-switcher {
+	left: auto;
+	right: -202px;
+}
+
+html[dir="rtl"] #styles-switcher.right {
+	right: auto;
+	left: -202px;
+}
+
+html[dir="rtl"] #styles-switcher .switcher-toggle {
+	right: auto;
+	left: -40px;
+	border-radius: 4px 0 0 4px;
+}
+
+html[dir="rtl"] #styles-switcher.right .switcher-toggle {
+	left: auto;
+	right: -40px;
+	border-radius: 0 4px 4px 0;
+}
